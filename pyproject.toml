@@ -25,10 +25,6 @@ implicit_reexport = true
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = """
-    --black
-    --flake8
-    --isort
-    --mypy
     --cov=src
     --cov=tests
     --cov-branch
