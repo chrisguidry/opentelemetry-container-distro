@@ -1,4 +1,5 @@
 import os
+from importlib.metadata import version
 from typing import List, Optional
 from unittest import mock
 
@@ -16,6 +17,8 @@ from opentelemetry_resourcedetector_kubernetes import (
     KubernetesDownwardAPIVolumeResourceDetector,
 )
 from opentelemetry_resourcedetector_process import ProcessResourceDetector
+
+__version__ = version("opentelemetry_container_distro")
 
 # Generally speaking, the beahvior of the opentelemetry-distro (just a thin layer over
 # opentelemetry-sdk) is what I want to preserve here.  The only realy shortcoming of
