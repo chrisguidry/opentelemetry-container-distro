@@ -1,4 +1,4 @@
-from pkg_resources import iter_entry_points
+from importlib import metadata
 
 from opentelemetry_container_distro import (
     OpenTelemetryContainerConfigurator,
@@ -7,7 +7,7 @@ from opentelemetry_container_distro import (
 
 
 def _first_entry_point(group):
-    entry_points = list(iter_entry_points(group))
+    entry_points = list(metadata.entry_points(group=group))
     assert len(entry_points) == 1
     return entry_points[0]
 
